@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <style>
+      #tit {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 64px;
+        font-style: italic;
+        font-weight: bold;
+        text-decoration: wavy;
+        color: forestgreen;
+      }
+      ion-icon {
+        font-size: 40px;
+        color: rgb(247, 66, 66);
+        border-style: solid;
+        border-color: black;
+        border-width: 5px;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <span id="tit"><center>Smart Curtain Bot</center></span>
+    <div
+      class="mdc-slider mdc-slider--discrete"
+      tabindex="0"
+      role="slider"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      aria-valuenow="0"
+      aria-label="Select Value"
+    >
+      <div class="mdc-slider__track-container">
+        <div class="mdc-slider__track"></div>
+      </div>
+      <div class="mdc-slider__thumb-container">
+        <div class="mdc-slider__pin">
+          <span class="mdc-slider__pin-value-marker"></span>
+        </div>
+        <svg class="mdc-slider__thumb" width="21" height="21">
+          <circle cx="10.5" cy="10.5" r="7.875"></circle>
+        </svg>
+        <div class="mdc-slider__focus-ring"></div>
+      </div>
+    </div>
+    <p>
+      <ion-icon name="caret-back-outline"></ion-icon>
+      <ion-icon name="caret-forward-outline"></ion-icon>
+    </p>
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+  </body>
+</html>

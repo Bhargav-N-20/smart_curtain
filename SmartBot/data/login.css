@@ -1,0 +1,260 @@
+body {
+  background: #009578;
+  margin: 15px;
+  margin-top: 60px;
+}
+
+.login-form,
+.login-form * {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+#btnwifi {
+  color: #ffffff;
+  font-size: 60px;
+}
+.tit {
+  color: #ffffff;
+  font-size: 30px;
+}
+.login-form {
+  max-width: 450px;
+  margin: 80px auto;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.85);
+}
+
+.login-form__logo-container {
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.login-form__logo {
+  display: block;
+  max-width: 125px;
+  margin: 0 auto;
+}
+
+.login-form__content {
+  padding: 30px;
+  background: #eeeeee;
+}
+
+.login-form__header {
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333333;
+  font-weight: bold;
+}
+
+.login-form__input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #dddddd;
+  background: #ffffff;
+  outline: none;
+  transition: border-color 0.5s;
+}
+
+.login-form__input:focus {
+  border-color: #009578;
+}
+.login-form__input::placeholder {
+  color: #aaaaaa;
+}
+
+.login-form__button {
+  padding: 10px;
+  color: #ffffff;
+  font-weight: bold;
+  background: #009578;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-form__button:active {
+  background: #008067;
+}
+.btn-show-hide-pwd {
+  color: #222c6a;
+  cursor: pointer;
+  margin-left: 10px;
+  opacity: 0.5;
+}
+.btn-show-hide-pwd:hover {
+  opacity: 1;
+}
+.btn-show-hide-pwd:active {
+  transform: scale(0.9);
+}
+.eyes {
+  color: #aaaaaa;
+  font-size: 15px;
+  padding-left: 5px;
+  font-style: oblique;
+}
+
+:root {
+  --bar-height: 72px;
+  --color-primary: #009579;
+  --color-primary-light: #0affd2;
+}
+
+.preload * {
+  transition: none !important;
+}
+.header {
+  height: 100vh;
+  background: linear-gradient(
+    to bottom right,
+    var(--color-primary),
+    var(--color-primary-light)
+  );
+  display: flex;
+  align-items: center;
+  padding-top: var(--bar-height);
+  box-sizing: border-box;
+}
+
+.centered {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.action {
+  max-width: 400px;
+  padding: 32px;
+  box-sizing: border-box;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+}
+.details {
+  font-size: 1.1em;
+}
+.first_button {
+  background: #ffffff;
+  outline: none;
+  font: bold 1.1em "Quicksand", sans-serif;
+  color: var(--color-primary);
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.first_button:hover {
+  background: transparent;
+  color: #ffffff;
+}
+#btnwifi {
+  font-size: 40px;
+  color: #ffffff;
+}
+.bar {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--bar-height);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  transition: background 0.15s;
+}
+.bar--bg {
+  background: var(--color-primary);
+}
+
+.bar__content {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bar__logo {
+  height: 100%;
+  padding-left: 45px;
+}
+
+.tit {
+  color: #ffffff;
+  font-size: 30px;
+}
+.header__button {
+  width: var(--header-height);
+  flex-shrink: 0;
+  background: none;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.nav__links {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100vh;
+  width: 250px;
+  background: #ffffff;
+  border-right: 2px solid #008c71;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.25);
+  transform: translateX(-250px);
+  transition: transform 0.3s;
+}
+
+.nav--open .nav__links {
+  transform: translateX(0);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  color: #666666;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 12px 15px;
+  background: transform 0.2s;
+}
+
+.nav__link > i {
+  margin-right: 15px;
+}
+.nav__link--active {
+  color: #009578;
+}
+
+.nav__link--active,
+.nav__link:hover {
+  background: #eeeeee;
+}
+.nav__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.nav--open .nav__overlay {
+  visibility: visible;
+  opacity: 1;
+}

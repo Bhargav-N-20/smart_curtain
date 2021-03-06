@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Wi-Fi Settings</title>
+    <link rel="stylesheet" href="login.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <script
+      src="https://kit.fontawesome.com/a282da4e1c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+
+    <div class="bar">
+      <div class="bar_content u-centered">
+          <button class="header__button" id="btnNav" type="button">
+              <i class="material-icons">menu</i>
+          </button>
+        <i class="material-icons bar__logo" id="btnwifi">wifi_tethering </i>
+        <span class="tit">IoT controlled Smart Bot</span>
+      </div>
+
+
+
+    <nav class="nav">
+      <div class="nav__links">
+          <a href="C:\Users\bharg\Smart curtain bot\header.html" class="nav__link ">
+              <i class="material-icons">home</i>
+              Home
+          </a>
+        <a href="C:\Users\bharg\Smart curtain bot\About.html" class="nav__link" >
+            <i class="material-icons">info</i>
+            About
+        </a>
+          
+          <a href="#" class="nav__link">
+            <i class="material-icons">tap_and_play</i>
+            Connected to
+        </a>
+        <a href="C:\Users\bharg\Smart curtain bot\login.html" class="nav__link nav__link--active">
+            <i class="material-icons">settings</i>
+            Wi-Fi Settings
+        </a>
+        <a href="C:\Users\bharg\Smart curtain bot\power.html" class="nav__link">
+            <i class="material-icons">power_settings_new</i>
+            Power
+        </a>
+        
+      </div>
+      <div class="nav__overlay"></div>
+
+  </nav>
+  <script>
+      window.addEventListener("load",()=>{
+          document.body.classList.remove("preload");
+      })
+      document.addEventListener("DOMContentLoaded",()=>{
+          const nav=document.querySelector(".nav");
+
+          document.querySelector("#btnNav").addEventListener("click",()=>{
+              nav.classList.add("nav--open");
+          });
+
+          
+          document.querySelector(".nav__overlay").addEventListener("click",()=>{
+              nav.classList.remove("nav--open");
+          });
+
+
+      });
+  </script>
+
+
+
+    <form class="login-form" action="./" method="POST">
+      <div class="login-form__logo-container">
+        <i class="material-icons login-form__logo" id="btnwifi"
+          >wifi_tethering
+        </i>
+        <span class="tit">IoT controlled Smart Bot</span>
+      </div>
+      <div class="login-form__content">
+        <div class="login-form__header">Connect to the network</div>
+        <input
+          class="login-form__input"
+          type="text"
+          name="dc_username"
+          placeholder="SSID"
+        />
+        <input
+          class="login-form__input"
+          type="password"
+          id="inp-password"
+          name="dc_password"
+          placeholder="Password"
+        /><i class="fas fa-eye btn-show-hide-pwd" data-for="inp-password"></i
+        ><span class="eyes">make password visible</span>
+        <button class="login-form__button" type="submit">Apply</button>
+      </div>
+    </form>
+
+    <script>
+      const allBtnSHP = document.querySelectorAll(".btn-show-hide-pwd");
+      allBtnSHP.forEach((button) => {
+        const forElement = document.getElementById(button.dataset.for);
+        if (forElement && forElement instanceof HTMLInputElement) {
+          ["mousedown", "touchstart"].forEach((eventName) => {
+            button.addEventListener(eventName, () => {
+              forElement.setAttribute("type", "text");
+            });
+          });
+          ["mouseup", "mouseleave", "touchend", "touchcancel"].forEach(
+            (eventName) => {
+              button.addEventListener(eventName, (e) => {
+                e.preventDefault();
+                forElement.setAttribute("type", "password");
+              });
+            }
+          );
+        }
+      });
+    </script>
+  </body>
+</html>
